@@ -8,6 +8,10 @@
     content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet"
     href="./dist/stylesheets/index.css">
+  <link rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous" />
   <title>Awesome Books | B2 Edition</title>
 </head>
 
@@ -45,19 +49,29 @@
   </div> -->
   <!-- Mobile menu -->
 
-  <header class="mx-6 my-3 bg-red-800">
-    <div class="mobile-nav hidden">
+  <header
+    class="mx-6 mt-3 bg-red-800 flex flex-col items-stretch justify-center">
+    <div
+      class="mobile-nav p-2 flex flex-row items-center justify-between md:hidden">
       <button class="mobile-menu-button" type="button">
-        <i class="fas fa-bars fa-2x"></i>
+        <img class="block w-8 h-8"
+          src="./src/images/menu.svg" alt="Menu">
       </button>
+      <span class="text-3xl"> <button class="font-nier"
+          type="button" name="button"> <i
+            class="fas fa-books"></i> Awesome
+          Books</button>
+      </span>
+
     </div>
     <!--
       -->
 
     <nav
-      class="desktop-nav w-full flex flex-row items-center justify-between ">
-      <span class="text-3xl"> <button type="button"
-          name="button"> Awesome
+      class="desktop-nav p-2 hidden md:flex md:flex-row md:items-center md:justify-between">
+      <span class="text-3xl"> <button class="font-nier"
+          type="button" name="button"> <i
+            class="fas fa-books"></i> Awesome
           Books</button>
       </span>
 
@@ -89,17 +103,30 @@
 
   <!-- <div class='date' id="date-container"></div> -->
 
-  <main>
-    <section id='home'>
-      <h1 class="section-title"><i
+  <main
+    class="flex flex-col items-center py-12 px-4 w-full justify-self-stretch bg-slate-500">
+    <section id='home'
+      class="w-10/12 h-full flex flex-col gap-3 justify-between items-center">
+      <h1 class="text-2xl headings"><i
           class="fad fa-book-heart"></i>
-        <span> All awesome books</span>
+        <span class="">All Awesome
+          Books</span>
       </h1>
-      <table id="container">
+      <table class="w-full h-5/6 table-auto">
+        <thead>
+          <tr>
+            <th>Title by Author
+            </th>
+            <th>Remove?</th>
+          </tr>
+        </thead>
+        <tbody id="container">
+
+        </tbody>
       </table>
     </section>
 
-    <section id='add-new'>
+    <section id='add-new' class="hidden">
       <h1 class="section-title">
         <i class="fas fa-book-medical"></i>
         <span>Add a new book</span>
@@ -128,7 +155,7 @@
     </section>
 
 
-    <section id='contact'>
+    <section id='contact' class="hidden">
       <h1 class="section-title"><i
           class="fas fa-address-card"></i>
         <span> Contact Us</span>
@@ -177,20 +204,20 @@
 
 
 
-  <footer class="copyright">
-    <a class="logo" href="#">
-
-      <h3>
-        <i class="fas fa-copyright"></i> Copyright
-      </h3>
+  <footer
+    class="mx-6 mb-3 bg-red-800 flex flex-row gap-6  justify-around items-center">
+    <a class="flex flex-row text-lg"
+      href="https://github.com/Sboursen/awesome-books">
+      <span>COPYRIGHT</span>
+      <img class="w-6 h-6 object-contain"
+        src="./src/images/copyright.svg" alt="copyright">
     </a>
 
-    <p class="logo-text">
-      Awesome Books 2B edition. Some Rights Reserved.
-      This is registred under the MIT license. for more
-      info, please <a
-        href="https://github.com/Sboursen/awesome-books">Refer
-        to this link</a>
+    <p class="text-sm hidden md:block">
+      Awesome Books 2B edition. Some Rights Reserved under
+      the <a
+        href="https://github.com/Sboursen/awesome-books">MIT
+        license</a>
     </p>
   </footer>
 
