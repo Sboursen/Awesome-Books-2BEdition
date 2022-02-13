@@ -1,0 +1,24 @@
+{
+  "name": "awesome-books-2bedition",
+  "version": "0.0.1",
+  "description": "Awesome books is simple web app that allows the user to create their own collection of books. The 2BEdition Uses a UI design heavily inspired by the award wining Nier Automata video game.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:js": "eslint **/*.main.js",
+    "lint:css": "stylelint **/*.{css,scss}",
+    "lint:html": "hint ./*.html && hint ./**/*.html",
+    "lintFix:js": "eslint **/*.main.js--fix",
+    "lintFix:css": "stylelint **/*.{css,scss} --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sboursen/Awesome-Books-2BEdition.git"
+  },
+  "author": "Sboursen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sboursen/Awesome-Books-2BEdition/issues"
+  },
+  "homepage": "https://github.com/Sboursen/Awesome-Books-2BEdition#readme"
+}
