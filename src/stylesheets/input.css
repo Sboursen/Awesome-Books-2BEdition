@@ -1,5 +1,10 @@
 /* stylelint-disable csstree/validator */
 /* stylelint-disable scss/at-rule-no-unknown */
+@import url('http://fonts.cdnfonts.com/css/helvetica-neue-9');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-element {
+  @apply flex flex-row items-center justify-center p-1 bg-blue-800;
+}

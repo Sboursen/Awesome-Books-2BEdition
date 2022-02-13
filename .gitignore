@@ -5,7 +5,7 @@ node_modules
 .vscode
 
 #desing folder
-src/assets/design
+src/design
 
 #Local linters
 .stylelintrc.json
