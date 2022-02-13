@@ -1,7 +1,12 @@
 #Node modules
 node_modules
+
 #vscode
 .vscode
+
+#desing folder
+src/assets/design
+
 #Local linters
 .stylelintrc.json
 .hintrc

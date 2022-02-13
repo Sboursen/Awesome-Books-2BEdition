@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="./dist/stylesheets/index.css">
+  <title>Awesome Books | B2 Edition</title>
+</head>
+
+
+<body class="grid grid-cols-1 grid-rows-3">
+  <!-- Mobile menu -->
+  <div class="mobile-menu">
+
+    <div class="toolbar">
+      <button class="cancel" type="button">
+      </button>
+    </div>
+
+    <p class="title">Awesome books
+
+    </p>
+
+    <ul class="page-navigation">
+      <li>
+        <button type="button"
+          class="mobile-list-link">List</button>
+      </li>
+      <li>
+        <button type="button"
+          class="mobile-add-new-link">Add
+          new</button>
+      </li>
+
+      <li>
+        <button type="button"
+          class="mobile-contact-link">Contact</button>
+      </li>
+    </ul>
+  </div>
+  <!-- Mobile menu -->
+
+  <header>
+    <div class="mobile-nav">
+      <button class="mobile-menu-button" type="button">
+        <i class="fas fa-bars fa-2x"></i>
+      </button>
+    </div>
+    <!--
+      -->
+
+    <nav class="desktop-nav">
+      <h3 class="logo-text"> <button
+          onclick="{getElementById('contact').style.display = 'none'; getElementById('add-new').style.display = 'none';  getElementById('home').style.display = 'block'}"
+          type="button" name="button"><i
+            class="fas fa-books"></i> Awesome
+          books</button>
+      </h3>
+
+
+      <ul class="page-navigation">
+        <li>
+          <button type="button"
+            class="mobile-list-link">List</button>
+        </li>
+        <li>
+          <button type="button"
+            class="mobile-add-new-link">Add
+            new</button>
+        </li>
+
+        <li>
+          <button type="button"
+            class="mobile-contact-link">Contact</button>
+        </li>
+      </ul>
+
+    </nav>
+    </div>
+
+
+  </header>
+
+  <div class='date' id="date-container"></div>
+
+  <main>
+    <section id='home'>
+      <h1 class="section-title"><i
+          class="fad fa-book-heart"></i>
+        <span> All awesome books</span>
+      </h1>
+      <table id="container">
+      </table>
+    </section>
+
+    <section id='add-new'>
+      <h1 class="section-title">
+        <i class="fas fa-book-medical"></i>
+        <span>Add a new book</span>
+      </h1>
+      <form>
+        <div class="input-container">
+          <label for="title">
+            <h3 class="label">Title: </h3>
+            <input type="text" name="title" value=""
+              id="title">
+          </label>
+        </div>
+        <div class="input-container">
+          <label for="author">
+            <h3 class="label">Author:</h3>
+            <input type="text" name="author" value=""
+              id="author">
+          </label>
+
+        </div>
+        <small id='form-validation'>LooL</small>
+        <button type="button" name="button"
+          class="add-book add-button">Add new book
+        </button>
+      </form>
+    </section>
+
+
+    <section id='contact'>
+      <h1 class="section-title"><i
+          class="fas fa-address-card"></i>
+        <span> Contact Us</span>
+      </h1>
+      <div class="contact-info">
+        <div>
+          <h3><i class="fas fa-user"></i> Soufiane Boursen
+          </h3>
+          <ul class="social">
+            <li><a href="https://github.com/Sboursen"><i
+                  class="fab fa-github"></i></a>
+            </li>
+            <li><a
+                href="https://twitter.com/sboursen_dev"><i
+                  class="fab fa-twitter"></i></a></li>
+            <li><a
+                href="https://linkedin.com/in/sboursen"><i
+                  class="fab fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div>
+          <h3><i class="fas fa-user"></i> Amira Abouhadid
+          </h3>
+          <ul class="social">
+            <li><a
+                href="https://github.com/amiraabouhadid"><i
+                  class="fab fa-github"></i></a>
+            </li>
+            <li><a
+                href="https://twitter.com/AbouhadidAmira"><i
+                  class="fab fa-twitter"></i></a></li>
+            <li><a
+                href="https://www.linkedin.com/in/amira-abouhadid/"><i
+                  class="fab fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+
+
+  <footer class="copyright">
+    <a class="logo" href="#">
+
+      <h3>
+        <i class="fas fa-copyright"></i> Copyright
+      </h3>
+    </a>
+
+    <p class="logo-text">
+      Awesome Books 2B edition. Some Rights Reserved.
+      This is registred under the MIT license. for more
+      info, please <a
+        href="https://github.com/Sboursen/awesome-books">Refer
+        to this link</a>
+    </p>
+  </footer>
+
+  <script src="./src/index.js" type="module"></script>
+</body>
+
+</html>
