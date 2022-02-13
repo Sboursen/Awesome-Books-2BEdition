@@ -4,21 +4,32 @@
   "description": "Awesome books is simple web app that allows the user to create their own collection of books. The 2BEdition Uses a UI design heavily inspired by the award wining Nier Automata video game.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint:js": "eslint **/*.main.js",
-    "lint:css": "stylelint **/*.{css,scss}",
-    "lint:html": "hint ./*.html && hint ./**/*.html",
-    "lintFix:js": "eslint **/*.main.js--fix",
-    "lintFix:css": "stylelint **/*.{css,scss} --fix"
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/stylesheets/styles.css",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/stylesheets/styles.css --watch",
+    "lint:js": "eslint --no-ignore ./dist/**/*.js",
+    "lint:css": "stylelint ./dist/stylesheets/*.{css,scss}",
+    "lintFix:js": "eslint --no-ignore ./dist/**/*.js --fix",
+    "lintFix:css": "stylelint ./dist/stylesheets/*.{css,scss} --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sboursen/Awesome-Books-2BEdition.git"
   },
-  "author": "Sboursen",
+  "author": "Soufiane Boursen",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Sboursen/Awesome-Books-2BEdition/issues"
   },
-  "homepage": "https://github.com/Sboursen/Awesome-Books-2BEdition#readme"
+  "homepage": "https://github.com/Sboursen/Awesome-Books-2BEdition#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.4",
+    "stylelint": "^14.5.0",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-csstree-validator": "^2.0.0",
+    "stylelint-scss": "^4.1.0",
+    "tailwindcss": "^3.0.22"
+  }
 }
