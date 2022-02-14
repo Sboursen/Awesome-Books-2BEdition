@@ -37,7 +37,6 @@
   @apply text-shadow;
 }
 
-
 .button {
   @apply relative z-10 text-active text-lg bg-bodyDark border-r-2 hover:text-bodyLight hover:bg-active;
   @apply before:z-0 hover:before:border-t-2 hover:before:border-b-2 hover:before:border-body before:w-full;
@@ -60,4 +59,9 @@ body {
   background-size: 6px 6px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 40px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 18px -18px inset;
+}
+
+.remove-button {
+  @apply hover:text-warning;
+  @apply transition-colors;
 }

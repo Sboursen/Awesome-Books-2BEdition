@@ -36,6 +36,8 @@ export default class UserInterface {
   static displayBook(book, index) {
     const bookContainer = document.createElement('tr');
     bookContainer.classList.add('block');
+    bookContainer.classList.add('px-2');
+    bookContainer.classList.add('py-1');
     bookContainer.classList.add('odd:bg-bodyLight');
     bookContainer.classList.add('even:bg-bodyDark');
     bookContainer.id = index;
@@ -51,6 +53,7 @@ export default class UserInterface {
     removeButton.innerHTML =
       "<i class='fas fa-trash-alt'></i> Remove";
 
+    removeButton.classList.add('removeButton');
     removeButton.onclick = () => {
       UserInterface.removeBook(book, index);
     };
