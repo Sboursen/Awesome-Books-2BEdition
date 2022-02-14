@@ -8,12 +8,11 @@
   font-family: nier-font;
 
   @font-face {
-    font-family: "Open Sans";
-    src:
-      url("./src/font/itc_benguiat_book-webfont.woff2")
-      format("woff2"),
-      url("./src/font/itc_benguiat_book-webfont.woff")
-      format("woff");
+    font-family: 'Open Sans';
+    src: url('./src/font/itc_benguiat_book-webfont.woff2')
+        format('woff2'),
+      url('./src/font/itc_benguiat_book-webfont.woff')
+        format('woff');
   }
 }
 
@@ -34,24 +33,10 @@
 }
 
 .headings {
-  /* text-shadow: 0.3rem 0.3rem 0 theme('colors.bodyDark'); */
   @apply text-active;
   @apply text-shadow;
 }
 
-.b-g {
-  background-image:
-    linear-gradient(
-      to right,
-      #ccc8b1 1px,
-      rgb(204 200 177 / 0%) 1px
-    ),
-    linear-gradient(
-      to bottom,
-      #ccc8b1 1px,
-      rgb(204 200 177 / 0%) 1px
-    );
-}
 
 .button {
   @apply relative z-10 text-active text-lg bg-bodyDark border-r-2 hover:text-bodyLight hover:bg-active;
@@ -62,4 +47,17 @@
 
 .cancel {
   @apply w-12 h-12 hover:bg-active hover:text-warning;
+}
+
+body {
+  background-color: #d1cdb7;
+  opacity: 0.8;
+  background-image: linear-gradient(
+      #ccc8b1 1px,
+      transparent 1px
+    ),
+    linear-gradient(to right, #ccc8b1 1px, #d1cdb7 1px);
+  background-size: 6px 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 40px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 18px -18px inset;
 }

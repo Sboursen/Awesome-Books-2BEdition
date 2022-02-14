@@ -20,6 +20,9 @@ module.exports = {
       lg: '992px',
       xlg: '1440px',
     },
+    backgroundImage: {
+      'body-bg': "url('./src/images/bg.png')",
+    },
   },
   plugins: [],
 };
