@@ -19,34 +19,43 @@
 <body
   class="bg-body text-active grid grid-cols-1 grid-rows-[5rem_1fr_5rem] w-full h-screen font-sans justify-items-stretch">
   <!-- Mobile menu -->
-  <!-- <div class="absolute h-screen w-full z-10">
+  <div class="absolute h-screen w-full z-10 bg-body">
 
-    <div class="toolbar">
+    <div
+      class="toolbar flex flex-row m-6 items-start justify-end">
       <button class="cancel" type="button">
+        <i class="fas fa-times fa-2x"></i>
       </button>
     </div>
 
-    <p class="title">Awesome books
+    <section
+      class="menu-body flex flex-col items-center gap-24">
+      <span class="text-3xl"> <button class="font-nier"
+          type="button" name="button"> <i
+            class="fas fa-books"></i> Awesome
+          Books</button>
+      </span>
 
-    </p>
+      <ul
+        class="page-navigation text-2xl flex flex-col gap-6 items-center w-full">
+        <li class="w-full flex justify-center">
+          <button type="button"
+            class="mobile-list-link button p-3 before:top-1 w-10/12 font-bold">List</button>
+        </li>
+        <li class="w-full  flex justify-center">
+          <button type="button"
+            class="mobile-add-new-link button p-3 before:top-1 w-10/12 font-bold">Add
+            new</button>
+        </li>
 
-    <ul class="page-navigation">
-      <li>
-        <button type="button"
-          class="mobile-list-link">List</button>
-      </li>
-      <li>
-        <button type="button"
-          class="mobile-add-new-link">Add
-          new</button>
-      </li>
+        <li class="w-full  flex justify-center">
+          <button type="button"
+            class="mobile-contact-link button p-3 before:top-1 w-10/12 font-bold">Contact</button>
+        </li>
+      </ul>
+    </section>
 
-      <li>
-        <button type="button"
-          class="mobile-contact-link">Contact</button>
-      </li>
-    </ul>
-  </div> -->
+  </div>
   <!-- Mobile menu -->
 
   <header
@@ -127,7 +136,7 @@
     </section>
 
     <section id='add-new'
-      class="w-10/12 h-full flex flex-col gap-3 justify-between items-center">
+      class="w-10/12 h-full hidden flex-col gap-3 justify-between items-center">
 
       <form class="w-full h-5/6 table-auto">
         <fieldset
@@ -176,47 +185,35 @@
     </section>
 
 
-    <section id='contact' class="hidden">
-      <h1 class="section-title"><i
+    <section id='contact'
+      class="flex w-10/12 h-full flex-col gap-12 justify-start items-center">
+      <h1 class="text-2xl headings"><i
           class="fas fa-address-card"></i>
-        <span> Contact Us</span>
+        <span class="">Add New Book</span>
       </h1>
-      <div class="contact-info">
-        <div>
-          <h3><i class="fas fa-user"></i> Soufiane Boursen
-          </h3>
-          <ul class="social">
-            <li><a href="https://github.com/Sboursen"><i
-                  class="fab fa-github"></i></a>
-            </li>
-            <li><a
-                href="https://twitter.com/sboursen_dev"><i
-                  class="fab fa-twitter"></i></a></li>
-            <li><a
-                href="https://linkedin.com/in/sboursen"><i
-                  class="fab fa-linkedin-in"></i></a>
-            </li>
-          </ul>
+      <div class="flex flex-row gap-3">
+        <div class="w-48"><img class="border-r-2"
+            src="./src/images/AnrcaneMe.png" alt="Author">
         </div>
 
-
-        <div>
-          <h3><i class="fas fa-user"></i> Amira Abouhadid
-          </h3>
-          <ul class="social">
-            <li><a
-                href="https://github.com/amiraabouhadid"><i
-                  class="fab fa-github"></i></a>
-            </li>
-            <li><a
-                href="https://twitter.com/AbouhadidAmira"><i
-                  class="fab fa-twitter"></i></a></li>
-            <li><a
-                href="https://www.linkedin.com/in/amira-abouhadid/"><i
-                  class="fab fa-linkedin-in"></i></a>
-            </li>
-          </ul>
-        </div>
+        <ul class="flex flex-col gap-3 mt-2">
+          <li>
+            <h3 class="font-bold"><i
+                class="fas fa-user mr-2"></i> Soufiane
+              Boursen
+            </h3>
+          </li>
+          <li><a href="https://github.com/Sboursen"><i
+                class="fab fa-github"></i> @Sboursen</a>
+          </li>
+          <li><a href="https://twitter.com/sboursen_dev"><i
+                class="fab fa-twitter"></i></a>
+            @sboursen_dev</li>
+          <li><a href="https://linkedin.com/in/sboursen"><i
+                class="fab fa-linkedin-in"></i>
+              @sboursen</a>
+          </li>
+        </ul>
       </div>
     </section>
 
