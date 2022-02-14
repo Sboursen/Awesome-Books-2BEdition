@@ -8,74 +8,102 @@
     content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet"
     href="./dist/stylesheets/index.css">
+  <link rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous" />
   <title>Awesome Books | B2 Edition</title>
 </head>
 
 
-<body class="grid grid-cols-1 grid-rows-3">
-  <!-- Mobile menu -->
-  <div class="mobile-menu">
+<body
+  class="bg-body text-active grid grid-cols-1 grid-rows-[5rem_1fr_5rem] w-full h-screen font-sans justify-items-stretch">
 
-    <div class="toolbar">
+  <!-- Mobile menu -->
+  <div
+    class="mobile-menu hidden absolute h-screen w-full z-20 bg-body">
+
+    <div
+      class="toolbar flex flex-row m-6 items-start justify-end">
       <button class="cancel" type="button">
+        <i class="fas fa-times fa-2x"></i>
       </button>
     </div>
 
-    <p class="title">Awesome books
+    <section
+      class="menu-body flex flex-col items-center gap-24">
+      <span class="text-3xl"> <button class="font-nier"
+          type="button" name="button"> <i
+            class="fas fa-books"></i> Awesome
+          Books</button>
+      </span>
 
-    </p>
+      <ul
+        class="page-navigation text-2xl flex flex-col gap-6 items-center w-full">
+        <li class="w-full flex justify-center">
+          <button type="button"
+            class="mobile-list-link button p-3 before:top-1 w-10/12 font-bold">List</button>
+        </li>
+        <li class="w-full  flex justify-center">
+          <button type="button"
+            class="mobile-add-new-link button p-3 before:top-1 w-10/12 font-bold">Add
+            new</button>
+        </li>
 
-    <ul class="page-navigation">
-      <li>
-        <button type="button"
-          class="mobile-list-link">List</button>
-      </li>
-      <li>
-        <button type="button"
-          class="mobile-add-new-link">Add
-          new</button>
-      </li>
+        <li class="w-full  flex justify-center">
+          <button type="button"
+            class="mobile-contact-link button p-3 before:top-1 w-10/12 font-bold">Contact</button>
+        </li>
+      </ul>
+    </section>
 
-      <li>
-        <button type="button"
-          class="mobile-contact-link">Contact</button>
-      </li>
-    </ul>
   </div>
   <!-- Mobile menu -->
 
-  <header>
-    <div class="mobile-nav">
-      <button class="mobile-menu-button" type="button">
+  <header
+    class="bg-transparent mx-6 mt-3 flex flex-col items-stretch justify-center">
+    <div
+      class="mobile-nav p-2 flex flex-row items-center justify-between md:hidden">
+      <button
+        class="mobile-menu-button hover:bg-active p-2 hover:text-body"
+        type="button">
         <i class="fas fa-bars fa-2x"></i>
       </button>
+      <span class="text-3xl"> <button class="font-nier"
+          type="button" name="button"> <i
+            class="fas fa-books"></i> Awesome
+          Books</button>
+      </span>
+
     </div>
     <!--
       -->
 
-    <nav class="desktop-nav">
-      <h3 class="logo-text"> <button
-          onclick="{getElementById('contact').style.display = 'none'; getElementById('add-new').style.display = 'none';  getElementById('home').style.display = 'block'}"
-          type="button" name="button"><i
+    <nav
+      class="desktop-nav p-2 hidden md:flex md:flex-row md:items-center md:justify-between">
+      <span class="text-3xl"> <button class="font-nier"
+          type="button" name="button"> <i
             class="fas fa-books"></i> Awesome
-          books</button>
-      </h3>
+          Books</button>
+      </span>
 
 
-      <ul class="page-navigation">
-        <li>
+      <ul
+        class="page-navigation flex flex-row items-center justify-center gap-3">
+        <li class="nav-element">
           <button type="button"
-            class="mobile-list-link">List</button>
+            class="mobile-list-link button before:top-0.5 px-1">Book
+            Collection</button>
         </li>
-        <li>
+        <li class="nav-element">
           <button type="button"
-            class="mobile-add-new-link">Add
-            new</button>
+            class="mobile-add-new-link button before:top-0.5 px-1">Add
+            New Book</button>
         </li>
 
-        <li>
+        <li class="nav-element">
           <button type="button"
-            class="mobile-contact-link">Contact</button>
+            class="mobile-contact-link button before:top-0.5 px-1">About</button>
         </li>
       </ul>
 
@@ -85,88 +113,110 @@
 
   </header>
 
-  <div class='date' id="date-container"></div>
+  <!-- <div class='date' id="date-container"></div> -->
 
-  <main>
-    <section id='home'>
-      <h1 class="section-title"><i
+  <main
+    class="flex flex-col items-center py-12 px-4 w-full justify-self-stretch">
+    <section id='home'
+      class="w-10/12 h-full flex flex-col gap-3 justify-between items-center">
+      <h1 class="text-2xl headings"><i
           class="fad fa-book-heart"></i>
-        <span> All awesome books</span>
+        <span class="">All Awesome
+          Books</span>
       </h1>
-      <table id="container">
+      <table class="w-full h-5/6 table-auto">
+        <thead>
+          <tr>
+            <th>Title by Author
+            </th>
+            <th>Remove?</th>
+          </tr>
+        </thead>
+        <tbody id="container">
+
+        </tbody>
       </table>
     </section>
 
-    <section id='add-new'>
-      <h1 class="section-title">
-        <i class="fas fa-book-medical"></i>
-        <span>Add a new book</span>
-      </h1>
-      <form>
-        <div class="input-container">
-          <label for="title">
-            <h3 class="label">Title: </h3>
-            <input type="text" name="title" value=""
-              id="title">
-          </label>
-        </div>
-        <div class="input-container">
-          <label for="author">
-            <h3 class="label">Author:</h3>
-            <input type="text" name="author" value=""
-              id="author">
-          </label>
+    <section id='add-new'
+      class="w-10/12 h-full hidden flex-col gap-3 justify-between items-center">
 
-        </div>
-        <small id='form-validation'>LooL</small>
-        <button type="button" name="button"
-          class="add-book add-button">Add new book
-        </button>
+      <form class="w-full h-5/6 table-auto">
+        <fieldset
+          class="w-full h-full table-auto flex flex-col justify-center gap-6 border-2 ">
+          <legend align="center">
+            <h1 class="text-2xl headings"><i
+                class="fad fa-book-medical"></i>
+              <span class="">Add New Book</span>
+            </h1>
+          </legend>
+          <div class="flex flex-col gap-3">
+            <label for="title"
+              class="flex flex-col justify-center gap-2 items-center">
+              <h3
+                class="w-11/12 text-active text-left text-xl">
+                Title</h3>
+              <input
+                class="w-11/12 bg-bodyLight py-1 px-2 text-active"
+                type="text" name="title" value=""
+                id="title">
+            </label>
+            <small id='title-validation'
+              class="hidden">LooL</small>
+          </div>
+          <div class="flex flex-col gap-3 items-stretch">
+            <label for="author"
+              class="flex flex-col justify-center gap-2 items-center">
+              <h3
+                class="w-11/12 text-active text-left text-xl">
+                Author</h3>
+              <input
+                class="w-11/12 bg-bodyLight py-1 px-2 text-active"
+                type="text" name="author" value=""
+                id="author">
+            </label>
+            <small id='author-validation'
+              class="hidden">LooL</small>
+
+          </div>
+
+          <button type="button" name="button"
+            class="button add-book add-button w-11/12 mx-auto p-2 before:top-1">Submit
+          </button>
+        </fieldset>
       </form>
     </section>
 
 
-    <section id='contact'>
-      <h1 class="section-title"><i
+    <section id='contact'
+      class="hidden w-10/12 h-full flex-col gap-12 justify-start items-center">
+      <h1 class="text-2xl headings"><i
           class="fas fa-address-card"></i>
-        <span> Contact Us</span>
+        <span class="">Add New Book</span>
       </h1>
-      <div class="contact-info">
-        <div>
-          <h3><i class="fas fa-user"></i> Soufiane Boursen
-          </h3>
-          <ul class="social">
-            <li><a href="https://github.com/Sboursen"><i
-                  class="fab fa-github"></i></a>
-            </li>
-            <li><a
-                href="https://twitter.com/sboursen_dev"><i
-                  class="fab fa-twitter"></i></a></li>
-            <li><a
-                href="https://linkedin.com/in/sboursen"><i
-                  class="fab fa-linkedin-in"></i></a>
-            </li>
-          </ul>
+      <div class="flex flex-row gap-3">
+        <div class="w-48"><img class="border-r-2"
+            src="./src/images/AnrcaneMe.png" alt="Author">
         </div>
 
-
-        <div>
-          <h3><i class="fas fa-user"></i> Amira Abouhadid
-          </h3>
-          <ul class="social">
-            <li><a
-                href="https://github.com/amiraabouhadid"><i
-                  class="fab fa-github"></i></a>
-            </li>
-            <li><a
-                href="https://twitter.com/AbouhadidAmira"><i
-                  class="fab fa-twitter"></i></a></li>
-            <li><a
-                href="https://www.linkedin.com/in/amira-abouhadid/"><i
-                  class="fab fa-linkedin-in"></i></a>
-            </li>
-          </ul>
-        </div>
+        <ul class="flex flex-col gap-3 mt-2">
+          <li>
+            <h3 class="font-bold"><i
+                class="fas fa-user mr-2"></i> Soufiane
+              Boursen
+            </h3>
+          </li>
+          <li><a href="https://github.com/Sboursen"><i
+                class="fab fa-github"></i> @Sboursen</a>
+          </li>
+          <li><a href="https://twitter.com/sboursen_dev"><i
+                class="fab fa-twitter"></i></a>
+            @sboursen_dev</li>
+          <li><a href="https://linkedin.com/in/sboursen"><i
+                class="fab fa-linkedin-in"></i>
+              @sboursen</a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -175,20 +225,20 @@
 
 
 
-  <footer class="copyright">
-    <a class="logo" href="#">
-
-      <h3>
-        <i class="fas fa-copyright"></i> Copyright
-      </h3>
+  <footer
+    class="mx-6 mb-3  flex flex-row gap-6  justify-around items-center">
+    <a class="flex flex-row text-lg"
+      href="https://github.com/Sboursen/awesome-books">
+      <span>COPYRIGHT</span>
+      <img class="w-6 h-6 object-contain"
+        src="./src/images/copyright.svg" alt="copyright">
     </a>
 
-    <p class="logo-text">
-      Awesome Books 2B edition. Some Rights Reserved.
-      This is registred under the MIT license. for more
-      info, please <a
-        href="https://github.com/Sboursen/awesome-books">Refer
-        to this link</a>
+    <p class="text-sm hidden md:block">
+      Awesome Books 2B edition. Some Rights Reserved under
+      the <a
+        href="https://github.com/Sboursen/awesome-books">MIT
+        license</a>
     </p>
   </footer>
 
