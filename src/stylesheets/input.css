@@ -8,11 +8,12 @@
   font-family: nier-font;
 
   @font-face {
-    font-family: 'Open Sans';
-    src: url('./src/font/itc_benguiat_book-webfont.woff2')
-        format('woff2'),
-      url('./src/font/itc_benguiat_book-webfont.woff')
-        format('woff');
+    font-family: "Open Sans";
+    src:
+      url("./src/font/itc_benguiat_book-webfont.woff2")
+      format("woff2"),
+      url("./src/font/itc_benguiat_book-webfont.woff")
+      format("woff");
   }
 }
 
@@ -51,14 +52,16 @@
 body {
   background-color: #d1cdb7;
   opacity: 0.8;
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       #ccc8b1 1px,
       transparent 1px
     ),
     linear-gradient(to right, #ccc8b1 1px, #d1cdb7 1px);
   background-size: 6px 6px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 40px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 18px -18px inset;
+  box-shadow:
+    rgb(50 50 93 / 25%) 0 20px 40px -12px inset,
+    rgb(0 0 0 / 30%) 0 18px 18px -18px inset;
 }
 
 .remove-button {

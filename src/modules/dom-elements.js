@@ -14,21 +14,15 @@ export const mobileMenu = document.querySelector(
 export const cancelMobileMenu = document.querySelector(
   '.mobile-menu .cancel',
 );
-export const contactSection =
-  document.getElementById('contact');
-export const addNewSection =
-  document.getElementById('add-new');
+export const contactSection = document.getElementById('contact');
+export const addNewSection = document.getElementById('add-new');
 export const homeSection = document.getElementById('home');
 export const { body } = document;
 
-export const container =
-  document.querySelector('#container');
+export const container = document.querySelector('#container');
 
 export const titleInput = document.querySelector('#title');
 
-export const authorInput =
-  document.querySelector('#author');
+export const authorInput = document.querySelector('#author');
 
-export const addButton =
-  document.querySelector('.add-book');
-
+export const addButton = document.querySelector('.add-book');

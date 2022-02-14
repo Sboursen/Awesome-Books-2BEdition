@@ -1,9 +1,9 @@
-import * as domElements from './dom-elements.js';
-import Book from './book.js';
-
-export let books;
+import * as domElements from './dom-elements';
+import Book from './book';
 
 export default class UserInterface {
+  static books = [];
+
   static container = domElements.container;
 
   static titleInput = domElements.titleInput;
@@ -18,18 +18,29 @@ export default class UserInterface {
       UserInterface.authorInput.value,
     );
 
-    books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
+    UserInterface.books.push(book);
+    localStorage.setItem(
+      'UserInterface.books',
+      JSON.stringify(UserInterface.books),
+    );
 
-    UserInterface.displayBook(book, books.length - 1);
+    UserInterface.displayBook(
+      book,
+      UserInterface.books.length - 1,
+    );
     UserInterface.titleInput.value = '';
     UserInterface.authorInput.value = '';
   }
 
   static removeBook(book, index) {
     const bookContainer = document.getElementById(index);
-    books = books.filter((el) => el !== book);
-    localStorage.setItem('books', JSON.stringify(books));
+    UserInterface.books = UserInterface.books.filter(
+      (el) => el !== book,
+    );
+    localStorage.setItem(
+      'UserInterface.books',
+      JSON.stringify(UserInterface.books),
+    );
     UserInterface.container.removeChild(bookContainer);
   }
 
@@ -45,13 +56,11 @@ export default class UserInterface {
     text.innerHTML = `"${book.title}" by ${book.author}`;
 
     bookContainer.append(text);
-    const removeButtonContainer =
-      document.createElement('td');
+    const removeButtonContainer = document.createElement('td');
 
     const removeButton = document.createElement('button');
     removeButton.classList.add('remove-button');
-    removeButton.innerHTML =
-      "<i class='fas fa-trash-alt'></i> Remove";
+    removeButton.innerHTML = "<i class='fas fa-trash-alt'></i> Remove";
 
     removeButton.classList.add('removeButton');
     removeButton.onclick = () => {
@@ -67,15 +76,17 @@ export default class UserInterface {
   }
 
   static IsDuplicate(book) {
-    return books.includes(book);
+    return UserInterface.books.includes(book);
   }
 }
 
 export const initializeLocalStorage = () => {
-  if (localStorage.getItem('books')) {
-    books = JSON.parse(localStorage.getItem('books'));
+  if (localStorage.getItem('UserInterface.books')) {
+    UserInterface.books = JSON.parse(
+      localStorage.getItem('UserInterface.books'),
+    );
   } else {
-    localStorage.setItem('books', '');
-    books = [];
+    localStorage.setItem('UserInterface.books', '');
+    UserInterface.books = [];
   }
 };

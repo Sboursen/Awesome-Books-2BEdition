@@ -1,5 +1,5 @@
-import * as domElements from './modules/dom-elements.js';
-import UserInterface, * as ui from './modules/book-collection.js';
+import * as domElements from './modules/dom-elements';
+import UserInterface, * as ui from './modules/book-collection';
 
 ui.initializeLocalStorage();
 ui.books.forEach((book, index) => {

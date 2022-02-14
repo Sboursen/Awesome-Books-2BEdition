@@ -1,4 +1,4 @@
-import * as domElements from './dom-elements.js';
+import * as domElements from './dom-elements';
 
 const MEDIA_BREAKPOINT = 768;
 const showMobileMenu = (e) => {
@@ -13,8 +13,8 @@ const showMobileMenu = (e) => {
 
 const hideMobileMenu = (e) => {
   if (
-    e.currentTarget.classList.contains('cancel') ||
-    e.currentTarget.parentNode.parentNode.classList.contains(
+    e.currentTarget.classList.contains('cancel')
+    || e.currentTarget.parentNode.parentNode.classList.contains(
       'page-navigation',
     )
   ) {
