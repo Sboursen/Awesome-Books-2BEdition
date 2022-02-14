@@ -189,6 +189,7 @@ const addNewSection = document.getElementById('add-new');
 const homeSection = document.getElementById('home');
 
 function showMobileMenu(e) {
+  console.log(e.currentTarget);
   if (
     e.currentTarget.classList.contains('mobile-menu-button')
   ) {
@@ -241,13 +242,13 @@ function hideMobileMenuOnEvent(e) {
   if (mobileMenu.style.display !== 'none') {
     if (e.type === 'resize') {
       if (window.innerWidth > MEDIA_BREAKPOINT) {
-        mobileMenu.style.display = 'none';
-        mobileMenu.style['z-index'] = -2;
+        mobileMenu.classList.remove('block');
+        mobileMenu.classList.add('hidden');
         document.body.style.overflowY = 'scroll';
       }
     } else {
-      mobileMenu.style.display = 'none';
-      mobileMenu.style['z-index'] = -2;
+      mobileMenu.classList.remove('block');
+      mobileMenu.classList.add('hidden');
       document.body.style.overflowY = 'scroll';
     }
   }

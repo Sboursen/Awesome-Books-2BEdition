@@ -506,6 +506,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 10;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .m-6 {
   margin: 1.5rem;
 }
@@ -914,6 +918,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .before\:top-2::before {
   content: var(--tw-content);
   top: 0.5rem;
+}
+
+.hover\:bg-active:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(69 65 56 / var(--tw-bg-opacity));
+}
+
+.hover\:text-body:hover {
+  --tw-text-opacity: 1;
+  color: rgb(209 205 183 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
