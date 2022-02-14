@@ -17,7 +17,7 @@
 
 
 <body
-  class="bg-body text-active grid grid-cols-1 grid-rows-[5rem_1fr_5rem] w-full h-screen font-sans justify-items-stretch">
+  class=" text-active grid grid-cols-1 grid-rows-[5rem_1fr_5rem] w-full h-screen font-sans justify-items-stretch">
 
   <!-- Mobile menu -->
   <div
@@ -32,9 +32,11 @@
 
     <section
       class="menu-body flex flex-col items-center gap-24">
-      <span class="text-3xl"> <button class="font-nier"
+      <span class="text-3xl ">
+        <button class="font-nier text-active text-shadow"
           type="button" name="button"> <i
-            class="fas fa-books"></i> Awesome
+            class="fas fa-books"></i>
+          Awesome
           Books</button>
       </span>
 
@@ -108,6 +110,7 @@
       </ul>
 
     </nav>
+
     </div>
 
 
@@ -116,24 +119,24 @@
   <!-- <div class='date' id="date-container"></div> -->
 
   <main
-    class="flex flex-col items-center py-12 px-4 w-full justify-self-stretch">
+    class="bg-contain flex flex-col items-center py-12 px-4 w-full justify-self-stretch">
     <section id='home'
-      class="w-10/12 h-full flex flex-col gap-3 justify-between items-center">
+      class="w-10/12 h-full flex flex-col gap-12 justify-start items-center ">
       <h1 class="text-2xl headings"><i
           class="fad fa-book-heart"></i>
         <span class="">All Awesome
           Books</span>
       </h1>
-      <table class="w-full h-5/6 table-auto">
+      <table
+        class="w-full min-h-12 table-auto bg-bodyLight">
         <thead>
-          <tr>
-            <th>Title by Author
+          <tr class="border-b-2 border-active text-left">
+            <th class="p-2">Title by Author
             </th>
-            <th>Remove?</th>
+            <th class="p-2">Remove</th>
           </tr>
         </thead>
-        <tbody id="container">
-
+        <tbody id="container" class="m-4">
         </tbody>
       </table>
     </section>
@@ -192,7 +195,7 @@
       class="hidden w-10/12 h-full flex-col gap-12 justify-start items-center">
       <h1 class="text-2xl headings"><i
           class="fas fa-address-card"></i>
-        <span class="">Add New Book</span>
+        <span class="">Contact me</span>
       </h1>
       <div class="flex flex-row gap-3">
         <div class="w-48"><img class="border-r-2"
@@ -242,6 +245,10 @@
     </p>
   </footer>
 
+  <script src="./src/modules/event-callback.js"
+    type="module"></script>
+  <script src="./src/modules/menu.js"
+    type="module"></script>
   <script src="./src/index.js" type="module"></script>
 </body>
 

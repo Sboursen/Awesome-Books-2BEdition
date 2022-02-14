@@ -34,23 +34,8 @@
 }
 
 .headings {
-  /* text-shadow: 0.3rem 0.3rem 0 theme('colors.bodyDark'); */
   @apply text-active;
   @apply text-shadow;
-}
-
-.b-g {
-  background-image:
-    linear-gradient(
-      to right,
-      #ccc8b1 1px,
-      rgb(204 200 177 / 0%) 1px
-    ),
-    linear-gradient(
-      to bottom,
-      #ccc8b1 1px,
-      rgb(204 200 177 / 0%) 1px
-    );
 }
 
 .button {
@@ -62,4 +47,24 @@
 
 .cancel {
   @apply w-12 h-12 hover:bg-active hover:text-warning;
+}
+
+body {
+  background-color: #d1cdb7;
+  opacity: 0.8;
+  background-image:
+    linear-gradient(
+      #ccc8b1 1px,
+      transparent 1px
+    ),
+    linear-gradient(to right, #ccc8b1 1px, #d1cdb7 1px);
+  background-size: 6px 6px;
+  box-shadow:
+    rgb(50 50 93 / 25%) 0 20px 40px -12px inset,
+    rgb(0 0 0 / 30%) 0 18px 18px -18px inset;
+}
+
+.remove-button {
+  @apply hover:text-warning;
+  @apply transition-colors;
 }

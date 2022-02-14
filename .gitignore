@@ -7,3 +7,5 @@ node_modules
 #desing folder
 src/design
 
+#old script
+src/modules/old.js

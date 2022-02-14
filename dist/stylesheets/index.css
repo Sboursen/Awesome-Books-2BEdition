@@ -502,16 +502,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: absolute;
 }
 
-.z-10 {
-  z-index: 10;
-}
-
 .z-20 {
   z-index: 20;
 }
 
 .m-6 {
   margin: 1.5rem;
+}
+
+.m-4 {
+  margin: 1rem;
 }
 
 .mx-6 {
@@ -540,10 +540,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.75rem;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -564,10 +560,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
 .h-full {
   height: 100%;
 }
@@ -584,10 +576,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
-.w-8 {
-  width: 2rem;
-}
-
 .w-10\/12 {
   width: 83.333333%;
 }
@@ -602,14 +590,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-6 {
   width: 1.5rem;
-}
-
-.w-11 {
-  width: 2.75rem;
-}
-
-.w-10 {
-  width: 2.5rem;
 }
 
 .table-auto {
@@ -668,24 +648,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-items: stretch;
 }
 
-.gap-3 {
-  gap: 0.75rem;
+.gap-24 {
+  gap: 6rem;
 }
 
 .gap-6 {
   gap: 1.5rem;
 }
 
-.gap-2 {
-  gap: 0.5rem;
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .gap-12 {
   gap: 3rem;
 }
 
-.gap-24 {
-  gap: 6rem;
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .justify-self-stretch {
@@ -696,8 +676,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 2px;
 }
 
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
 .border-r-2 {
   border-right-width: 2px;
+}
+
+.border-active {
+  --tw-border-opacity: 1;
+  border-color: rgb(69 65 56 / var(--tw-border-opacity));
 }
 
 .bg-body {
@@ -714,17 +703,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(218 219 191 / var(--tw-bg-opacity));
 }
 
+.bg-contain {
+  background-size: contain;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.p-2 {
-  padding: 0.5rem;
-}
-
 .p-3 {
   padding: 0.75rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-1 {
@@ -798,8 +791,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(69 65 56 / var(--tw-text-opacity));
 }
 
+.text-shadow {
+  text-shadow: 0.3rem 0.3rem 0 #bab5a1;
+}
+
 @font-face {
-  font-family: 'nier-font';
+  font-family: nier-font;
 
   @font-face {
     font-family: 'Open Sans';
@@ -820,23 +817,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .headings {
-  /* text-shadow: 0.3rem 0.3rem 0 theme('colors.bodyDark'); */
   --tw-text-opacity: 1;
   color: rgb(69 65 56 / var(--tw-text-opacity));
   text-shadow: 0.3rem 0.3rem 0 #bab5a1;
-}
-
-.b-g {
-  background-image: linear-gradient(
-      to right,
-      #ccc8b1 1px,
-      rgba(204, 200, 177, 0) 1px
-    ),
-    linear-gradient(
-      to bottom,
-      #ccc8b1 1px,
-      rgba(204, 200, 177, 0) 1px
-    );
 }
 
 .button {
@@ -876,7 +859,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: absolute;
   left: 0px;
   height: 83.333333%;
-  --tw-content: '';
+  --tw-content: "";
   content: var(--tw-content);
 }
 
@@ -900,6 +883,37 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(191 104 81 / var(--tw-text-opacity));
 }
 
+body {
+  background-color: #d1cdb7;
+  opacity: 0.8;
+  background-image: linear-gradient(
+      #ccc8b1 1px,
+      transparent 1px
+    ),
+    linear-gradient(to right, #ccc8b1 1px, #d1cdb7 1px);
+  background-size: 6px 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 40px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 18px -18px inset;
+}
+
+.remove-button:hover {
+  --tw-text-opacity: 1;
+  color: rgb(191 104 81 / var(--tw-text-opacity));
+}
+
+.remove-button {
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.before\:top-1::before {
+  content: var(--tw-content);
+  top: 0.25rem;
+}
+
 .before\:top-0\.5::before {
   content: var(--tw-content);
   top: 0.125rem;
@@ -908,16 +922,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .before\:top-0::before {
   content: var(--tw-content);
   top: 0px;
-}
-
-.before\:top-1::before {
-  content: var(--tw-content);
-  top: 0.25rem;
-}
-
-.before\:top-2::before {
-  content: var(--tw-content);
-  top: 0.5rem;
 }
 
 .hover\:bg-active:hover {
