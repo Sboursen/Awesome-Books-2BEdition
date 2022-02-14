@@ -57,7 +57,6 @@ const toggleSection = (e) => {
         'mobile-contact-link',
       ),
     ].join('');
-    console.log(eventCaller);
 
     switch (eventCaller) {
       case 'truefalsefalse':
