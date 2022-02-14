@@ -26,3 +26,7 @@ export const titleInput = document.querySelector('#title');
 export const authorInput = document.querySelector('#author');
 
 export const addButton = document.querySelector('.add-book');
+
+export const dateTimeContainer = document.getElementById(
+  'date-container',
+);
