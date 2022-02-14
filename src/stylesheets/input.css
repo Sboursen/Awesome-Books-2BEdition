@@ -5,13 +5,15 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'nier-font';
+  font-family: nier-font;
+
   @font-face {
-    font-family: 'Open Sans';
-    src: url('./src/font/itc_benguiat_book-webfont.woff2')
-        format('woff2'),
-      url('./src/font/itc_benguiat_book-webfont.woff')
-        format('woff');
+    font-family: "Open Sans";
+    src:
+      url("./src/font/itc_benguiat_book-webfont.woff2")
+      format("woff2"),
+      url("./src/font/itc_benguiat_book-webfont.woff")
+      format("woff");
   }
 }
 
@@ -20,6 +22,7 @@
     .text-shadow {
       text-shadow: 0.3rem 0.3rem 0 #bab5a1;
     }
+
     .text-shadow-md {
       text-shadow: 0.6rem 0.6rem 0 #bab5a1;
     }
@@ -37,22 +40,23 @@
 }
 
 .b-g {
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       to right,
       #ccc8b1 1px,
-      rgba(204, 200, 177, 0) 1px
+      rgb(204 200 177 / 0%) 1px
     ),
     linear-gradient(
       to bottom,
       #ccc8b1 1px,
-      rgba(204, 200, 177, 0) 1px
+      rgb(204 200 177 / 0%) 1px
     );
 }
 
 .button {
   @apply relative z-10 text-active text-lg bg-bodyDark border-r-2 hover:text-bodyLight hover:bg-active;
   @apply before:z-0 hover:before:border-t-2 hover:before:border-b-2 hover:before:border-body before:w-full;
-  @apply before:h-5/6 before:absolute before:left-0 before:content-[''];
+  @apply before:h-5/6 before:absolute before:left-0 before:content-[""];
   @apply transition-colors;
 }
 

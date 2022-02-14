@@ -73,8 +73,8 @@ class UserInterface {
       UserInterface.authorInput.value,
     );
     if (
-      UserInterface.IsValid(book) &&
-      !UserInterface.IsDuplicate(book)
+      UserInterface.IsValid(book)
+      && !UserInterface.IsDuplicate(book)
     ) {
       books.push(book);
       localStorage.setItem('books', JSON.stringify(books));
@@ -95,8 +95,7 @@ class UserInterface {
       const addedAlert = document.getElementById(
         'form-validation',
       );
-      addedAlert.innerHTML =
-        'Please enter a new valid book';
+      addedAlert.innerHTML = 'Please enter a new valid book';
       addedAlert.style.color = 'red';
       setTimeout(() => {
         UserInterface.titleInput.value = '';
@@ -121,13 +120,11 @@ class UserInterface {
     text.innerHTML = `"${book.title}" by ${book.author}`;
 
     bookContainer.append(text);
-    const removeButtonContainer =
-      document.createElement('td');
+    const removeButtonContainer = document.createElement('td');
 
     const removeButton = document.createElement('button');
     removeButton.classList.add('remove-button');
-    removeButton.innerHTML =
-      "<i class='fas fa-trash-alt'></i> Remove";
+    removeButton.innerHTML = "<i class='fas fa-trash-alt'></i> Remove";
 
     removeButton.onclick = () => {
       UserInterface.removeBook(book, index);
@@ -189,7 +186,6 @@ const addNewSection = document.getElementById('add-new');
 const homeSection = document.getElementById('home');
 
 function showMobileMenu(e) {
-  console.log(e.currentTarget);
   if (
     e.currentTarget.classList.contains('mobile-menu-button')
   ) {
@@ -286,10 +282,6 @@ function toggleSection(e) {
 
 mobileMenuButton.addEventListener('click', showMobileMenu);
 cancelMobileMenu.addEventListener('click', hideMobileMenu);
-mobileMenuList.forEach((node) =>
-  node.addEventListener('click', hideMobileMenu),
-);
+mobileMenuList.forEach((node) => node.addEventListener('click', hideMobileMenu));
 window.addEventListener('resize', hideMobileMenuOnEvent);
-desktopMenuList.forEach((node) =>
-  node.addEventListener('click', toggleSection),
-);
+desktopMenuList.forEach((node) => node.addEventListener('click', toggleSection));

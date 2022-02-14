@@ -7,7 +7,3 @@ node_modules
 #desing folder
 src/design
 
-#Local linters
-.stylelintrc.json
-.hintrc
-.eslintrc.json
