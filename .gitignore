@@ -1,8 +1,11 @@
 #Node modules
 node_modules
+
 #vscode
 .vscode
-#Local linters
-.stylelintrc.json
-.hintrc
-.eslintrc.json
+
+#desing folder
+src/design
+
+#old script
+src/modules/old.js

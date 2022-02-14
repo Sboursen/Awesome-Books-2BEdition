@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="./dist/stylesheets/index.css">
+  <link rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous" />
+  <title>Awesome Books | B2 Edition</title>
+</head>
+
+
+<body
+  class=" text-active grid grid-cols-1 grid-rows-[5rem_1fr_5rem] w-full h-screen font-sans justify-items-stretch">
+
+  <!-- Mobile menu -->
+  <div
+    class="mobile-menu hidden absolute h-screen w-full z-20 bg-body">
+
+    <div
+      class="toolbar flex flex-row m-6 items-start justify-end">
+      <button class="cancel" type="button">
+        <i class="fas fa-times fa-2x"></i>
+      </button>
+    </div>
+
+    <section
+      class="menu-body flex flex-col items-center gap-24">
+      <span class="text-3xl ">
+        <button class="font-nier text-active text-shadow"
+          type="button" name="button"> <i
+            class="fas fa-books"></i>
+          Awesome
+          Books</button>
+      </span>
+
+      <ul
+        class="page-navigation text-2xl flex flex-col gap-6 items-center w-full">
+        <li class="w-full flex justify-center">
+          <button type="button"
+            class="mobile-list-link button p-3 before:top-1 w-10/12 font-bold">List</button>
+        </li>
+        <li class="w-full  flex justify-center">
+          <button type="button"
+            class="mobile-add-new-link button p-3 before:top-1 w-10/12 font-bold">Add
+            new</button>
+        </li>
+
+        <li class="w-full  flex justify-center">
+          <button type="button"
+            class="mobile-contact-link button p-3 before:top-1 w-10/12 font-bold">Contact</button>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+  <!-- Mobile menu -->
+
+  <header
+    class="bg-transparent mx-6 mt-3 flex flex-col items-stretch justify-center">
+    <div
+      class="mobile-nav p-2 flex flex-row items-center justify-between md:hidden">
+      <button
+        class="mobile-menu-button hover:bg-active p-2 hover:text-body"
+        type="button">
+        <i class="fas fa-bars fa-2x"></i>
+      </button>
+      <span class="text-3xl"> <button class="font-nier"
+          type="button" name="button"> <i
+            class="fas fa-books"></i> Awesome
+          Books</button>
+      </span>
+
+    </div>
+    <!--
+      -->
+
+    <nav
+      class="desktop-nav p-2 hidden md:flex md:flex-row md:items-center md:justify-between">
+      <span class="text-3xl"> <button class="font-nier"
+          type="button" name="button"> <i
+            class="fas fa-books"></i> Awesome
+          Books</button>
+      </span>
+
+
+      <ul
+        class="page-navigation flex flex-row items-center justify-center gap-3">
+        <li class="nav-element">
+          <button type="button"
+            class="mobile-list-link button before:top-0.5 px-1">Book
+            Collection</button>
+        </li>
+        <li class="nav-element">
+          <button type="button"
+            class="mobile-add-new-link button before:top-0.5 px-1">Add
+            New Book</button>
+        </li>
+
+        <li class="nav-element">
+          <button type="button"
+            class="mobile-contact-link button before:top-0.5 px-1">About</button>
+        </li>
+      </ul>
+    </nav>
+
+    <div class='h-4 w-full text-right pr-10 font-semibold'
+      id="date-container">
+      Hero
+    </div>
+
+
+  </header>
+
+
+
+  <main
+    class="bg-contain flex flex-col items-center py-12 px-4 w-full justify-self-stretch">
+    <section id='home'
+      class="w-10/12 h-full flex flex-col gap-12 justify-start items-center ">
+      <h1 class="text-2xl headings"><i
+          class="fad fa-book-heart"></i>
+        <span class="">All Awesome
+          Books</span>
+      </h1>
+      <table
+        class="w-full min-h-12 table-auto bg-bodyLight">
+        <thead>
+          <tr class="border-b-2 border-active text-left">
+            <th class="p-2">Title by Author
+            </th>
+            <th class="p-2">Remove</th>
+          </tr>
+        </thead>
+        <tbody id="container" class="m-4">
+        </tbody>
+      </table>
+    </section>
+
+    <section id='add-new'
+      class="w-10/12 h-full hidden flex-col gap-3 justify-between items-center">
+
+      <form class="w-full h-5/6 table-auto">
+        <fieldset
+          class="w-full h-full table-auto flex flex-col justify-center gap-6 border-2 ">
+          <legend align="center">
+            <h1 class="text-2xl headings"><i
+                class="fad fa-book-medical"></i>
+              <span class="">Add New Book</span>
+            </h1>
+          </legend>
+          <div class="flex flex-col gap-3">
+            <label for="title"
+              class="flex flex-col justify-center gap-2 items-center">
+              <h3
+                class="w-11/12 text-active text-left text-xl">
+                Title</h3>
+              <input
+                class="w-11/12 bg-bodyLight py-1 px-2 text-active"
+                type="text" name="title" value=""
+                id="title">
+            </label>
+            <small id='title-validation'
+              class="hidden">LooL</small>
+          </div>
+          <div class="flex flex-col gap-3 items-stretch">
+            <label for="author"
+              class="flex flex-col justify-center gap-2 items-center">
+              <h3
+                class="w-11/12 text-active text-left text-xl">
+                Author</h3>
+              <input
+                class="w-11/12 bg-bodyLight py-1 px-2 text-active"
+                type="text" name="author" value=""
+                id="author">
+            </label>
+            <small id='author-validation'
+              class="hidden">LooL</small>
+
+          </div>
+
+          <button type="button" name="button"
+            class="button add-book add-button w-11/12 mx-auto p-2 before:top-1">Submit
+          </button>
+        </fieldset>
+      </form>
+    </section>
+
+
+    <section id='contact'
+      class="hidden w-10/12 h-full flex-col gap-12 justify-start items-center">
+      <h1 class="text-2xl headings"><i
+          class="fas fa-address-card"></i>
+        <span class="">Contact me</span>
+      </h1>
+      <div class="flex flex-row gap-3">
+        <div class="w-48"><img class="border-r-2"
+            src="./src/images/AnrcaneMe.png" alt="Author">
+        </div>
+
+        <ul class="flex flex-col gap-3 mt-2">
+          <li>
+            <h3 class="font-bold"><i
+                class="fas fa-user mr-2"></i> Soufiane
+              Boursen
+            </h3>
+          </li>
+          <li><a href="https://github.com/Sboursen"><i
+                class="fab fa-github"></i> @Sboursen</a>
+          </li>
+          <li><a href="https://twitter.com/sboursen_dev"><i
+                class="fab fa-twitter"></i></a>
+            @sboursen_dev</li>
+          <li><a href="https://linkedin.com/in/sboursen"><i
+                class="fab fa-linkedin-in"></i>
+              @sboursen</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+  </main>
+
+
+
+  <footer
+    class="mx-6 mb-3  flex flex-row gap-6  justify-around items-center">
+    <a class="flex flex-row text-lg"
+      href="https://github.com/Sboursen/awesome-books">
+      <span>COPYRIGHT</span>
+      <img class="w-6 h-6 object-contain"
+        src="./src/images/copyright.svg" alt="copyright">
+    </a>
+
+    <p class="text-sm hidden md:block">
+      Awesome Books 2B edition. Some Rights Reserved under
+      the <a
+        href="https://github.com/Sboursen/awesome-books">MIT
+        license</a>
+    </p>
+  </footer>
+
+  <script src="./src/modules/event-callback.js"
+    type="module"></script>
+  <script src="./src/modules/menu.js"
+    type="module"></script>
+  <script src="./src/index.js" type="module"></script>
+</body>
+
+</html>

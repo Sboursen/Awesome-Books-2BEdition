@@ -4,12 +4,12 @@
   "description": "Awesome books is simple web app that allows the user to create their own collection of books. The 2BEdition Uses a UI design heavily inspired by the award wining Nier Automata video game.",
   "main": "index.html",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/input.css -o ./dist/stylesheets/styles.css",
-    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/stylesheets/styles.css --watch",
-    "lint:js": "eslint --no-ignore ./dist/**/*.js",
-    "lint:css": "stylelint ./dist/stylesheets/*.{css,scss}",
-    "lintFix:js": "eslint --no-ignore ./dist/**/*.js --fix",
-    "lintFix:css": "stylelint ./dist/stylesheets/*.{css,scss} --fix"
+    "build:css": "tailwindcss -i ./src/stylesheets/input.css -o ./dist/stylesheets/index.css",
+    "watch:css": "tailwindcss -i ./src/stylesheets/input.css -o ./dist/stylesheets/index.css --watch",
+    "lint:js": "eslint ./src/**/*.js",
+    "lint:css": "stylelint ./src/stylesheets/*.{css,scss}",
+    "lintFix:js": "eslint ./src/**/*.js --fix",
+    "lintFix:css": "stylelint ./src/stylesheets/*.{css,scss} --fix"
   },
   "repository": {
     "type": "git",
@@ -31,5 +31,8 @@
     "stylelint-csstree-validator": "^2.0.0",
     "stylelint-scss": "^4.1.0",
     "tailwindcss": "^3.0.22"
+  },
+  "dependencies": {
+    "luxon": "^2.3.0"
   }
 }
