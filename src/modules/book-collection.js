@@ -2,8 +2,6 @@
 import * as domElements from './dom-elements.js';
 // eslint-disable-next-line import/extensions
 import Book from './book.js';
-// eslint-disable-next-line import/extensions
-import { DateTime } from '../../dist/modules/luxon/src/luxon.js';
 
 export default class UserInterface {
   static books = [];
