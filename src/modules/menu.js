@@ -1,6 +1,7 @@
-// ||| Hide and show mobile menu and sections
-import * as eventCallback from './event-callback';
-import * as domElements from './dom-elements';
+// eslint-disable-next-line import/extensions
+import * as eventCallback from './event-callback.js';
+// eslint-disable-next-line import/extensions
+import * as domElements from './dom-elements.js';
 
 domElements.mobileMenuButton.addEventListener(
   'click',
