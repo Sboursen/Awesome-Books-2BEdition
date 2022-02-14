@@ -1,5 +1,7 @@
-import * as domElements from './dom-elements';
-import Book from './book';
+// eslint-disable-next-line import/extensions
+import * as domElements from './dom-elements.js';
+// eslint-disable-next-line import/extensions
+import Book from './book.js';
 
 export default class UserInterface {
   static books = [];

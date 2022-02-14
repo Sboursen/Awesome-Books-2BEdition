@@ -1,4 +1,5 @@
-import * as domElements from './dom-elements';
+// eslint-disable-next-line import/extensions
+import * as domElements from './dom-elements.js';
 
 const MEDIA_BREAKPOINT = 768;
 const showMobileMenu = (e) => {
