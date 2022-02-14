@@ -568,6 +568,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.5rem;
 }
 
+.min-h-0 {
+  min-height: 0px;
+}
+
 .w-full {
   width: 100%;
 }
@@ -662,6 +666,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .justify-self-stretch {
@@ -913,6 +921,30 @@ body {
 .before\:top-0::before {
   content: var(--tw-content);
   top: 0px;
+}
+
+.odd\:bg-bodyLight:nth-child(odd) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(218 219 191 / var(--tw-bg-opacity));
+}
+
+.odd\:to-blue-900:nth-child(odd) {
+  --tw-gradient-to: #1e3a8a;
+}
+
+.even\:bg-body:nth-child(even) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 205 183 / var(--tw-bg-opacity));
+}
+
+.even\:bg-bodyDark:nth-child(even) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(186 181 161 / var(--tw-bg-opacity));
+}
+
+.even\:bg-red-600:nth-child(even) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-active:hover {

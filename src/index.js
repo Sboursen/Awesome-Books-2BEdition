@@ -1,9 +1,8 @@
 import * as domElements from './modules/dom-elements.js';
-import UserInterface from './modules/book-collection.js';
-import * as localStorageOp from './modules/local-storage.js';
+import UserInterface, * as ui from './modules/book-collection.js';
 
-localStorageOp.initializeLocalStorage();
-localStorageOp.books.forEach((book, index) => {
+ui.initializeLocalStorage();
+ui.books.forEach((book, index) => {
   UserInterface.displayBook(book, index);
 });
 domElements.addButton.addEventListener(
