@@ -2,6 +2,7 @@ import * as domElements from './dom-elements.js';
 import Book from './book.js';
 
 export let books;
+
 export default class UserInterface {
   static container = domElements.container;
 
@@ -21,6 +22,8 @@ export default class UserInterface {
     localStorage.setItem('books', JSON.stringify(books));
 
     UserInterface.displayBook(book, books.length - 1);
+    UserInterface.titleInput.value = '';
+    UserInterface.authorInput.value = '';
   }
 
   static removeBook(book, index) {
@@ -31,7 +34,6 @@ export default class UserInterface {
   }
 
   static displayBook(book, index) {
-    console.log('inside display books');
     const bookContainer = document.createElement('tr');
     bookContainer.classList.add('block');
     bookContainer.classList.add('odd:bg-bodyLight');
