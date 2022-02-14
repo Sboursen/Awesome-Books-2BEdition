@@ -671,6 +671,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.5rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -686,9 +695,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.25rem;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .text-left {
@@ -751,8 +760,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
   padding: 0.25rem;
 }
 
@@ -782,7 +789,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-right-width: 2px;
   --tw-bg-opacity: 1;
   background-color: rgb(186 181 161 / var(--tw-bg-opacity));
-  padding: 0.5rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
@@ -812,7 +818,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .button::before {
   position: absolute;
-  top: 0.25rem;
   left: 0px;
   height: 83.333333%;
   --tw-content: '';
@@ -825,6 +830,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.before\:top-1::before {
+  content: var(--tw-content);
+  top: 0.25rem;
+}
+
+.before\:top-0\.5::before {
+  content: var(--tw-content);
+  top: 0.125rem;
+}
+
+.before\:top-0::before {
+  content: var(--tw-content);
+  top: 0px;
 }
 
 @media (min-width: 768px) {

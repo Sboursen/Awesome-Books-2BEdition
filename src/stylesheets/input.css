@@ -27,7 +27,7 @@
 }
 
 .nav-element {
-  @apply flex flex-row items-center justify-center p-1 bg-blue-800;
+  @apply flex flex-row items-center justify-center p-1;
 }
 
 .headings {
@@ -50,8 +50,8 @@
 }
 
 .button {
-  @apply relative z-10 text-active text-lg bg-bodyDark border-r-2 hover:text-bodyLight p-2 hover:bg-active;
+  @apply relative z-10 text-active text-lg bg-bodyDark border-r-2 hover:text-bodyLight hover:bg-active;
   @apply before:z-0 hover:before:border-t-2 hover:before:border-b-2 hover:before:border-body before:w-full;
-  @apply before:h-5/6 before:absolute before:top-1 before:left-0 before:content-[''];
+  @apply before:h-5/6 before:absolute before:left-0 before:content-[''];
   @apply transition-colors;
 }
