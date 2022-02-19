@@ -1,37 +1,32 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Awesome books 2B edition
 
 > Awesome books is simple web app that allows the user to create their own collection of books. The 2BEdition Uses a UI design heavily inspired by the award wining Nier Automata video game.
 
 ## Built With
 
-- HTML5
-- Tailwind css
-- ES6 JavaScript
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+- ![](https://img.shields.io/badge/HTML-5-orange)
+- ![](https://img.shields.io/badge/Tailwind-CSS-blue)
+- ![](https://img.shields.io/badge/JavaScript-ES6-yellow)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
+**Prerequisites:** A Web Browser (preferably FireFox or Chrome)
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### **Option 1**
 
-### Setup
+#### Use the live Website
 
-### Install
+[Awesome Books Website](https://sboursen.github.io/Awesome-Books-2BEdition/)
 
-### Usage
+### **Option 2**
 
-### Run tests
+#### Set up your own copy locally
 
-### Deployment
+- Clone [the GitHub Repository](https://github.com/Sboursen/Awesome-Books-2BEdition)
+- Go to the Project `cd Awesome-Books-2BEdition`
+- Run `npm install` to install the _dependencies_
+  \_ Open the `index.html` using your browser.
 
 ## About me
 
@@ -39,28 +34,24 @@ To get a local copy up and running follow these simple example steps.
 
 - GitHub: [@Sboursen](https://github.com/Sboursen)
 - Twitter: [@sboursen_dev](https://twitter.com/sboursen_dev)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/sboursen)
+- LinkedIn: [@sboursen](https://linkedin.com/in/sboursen)
 
 ## Contributors
 
 Contributions, issues, and feature requests are welcome!
+
 Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+Feel free to leave a ⭐️ if you like this project!
 
 ## Acknowledgements
 
-- [link1]()
-- [link2]()
-- [link3]()
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+Design inspiration by[
+Lars Gerrit Kliesing LGK](https://codepen.io/lgkonline/pen/WpMRQG?editors=1100)
 
 ## 📝 License
 
