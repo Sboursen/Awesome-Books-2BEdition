@@ -13,8 +13,7 @@
 ![](src/asset/AwesomeBook2B.gif)
 ## Getting Started
 
-**Prerequisites:** A Web Browser (preferably FireFox or Chrome)
-To get a local copy up and running follow these simple example steps.
+**Prerequisites:** A Web Browser (preferably FireFox or Chrome).
 
 ### **Option 1**
 
