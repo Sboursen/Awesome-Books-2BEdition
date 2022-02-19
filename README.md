@@ -50,6 +50,9 @@ Feel free to leave a ⭐️ if you like this project!
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
+Design inspiration by[
+Lars Gerrit Kliesing LGK](https://codepen.io/lgkonline/pen/WpMRQG?editors=1100)
+
 ## 📝 License
 
 This project is [MIT](./LICENSE.md) licensed.
