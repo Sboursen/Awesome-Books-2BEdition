@@ -6,6 +6,10 @@ import { DateTime } from '../../dist/modules/luxon/src/luxon.js';
 export default function addDate() {
   const navbarContainer = domElements.dateTimeContainer;
   navbarContainer.innerHTML = '';
-  const date = DateTime.now().toLocal();
-  navbarContainer.append(date.toHTTP());
+  const date = DateTime.now();
+  navbarContainer.append(
+    date.toLocaleString(
+      DateTime.DATETIME_FULL_WITH_SECONDS,
+    ),
+  );
 }
