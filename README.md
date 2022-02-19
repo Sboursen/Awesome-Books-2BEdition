@@ -8,6 +8,9 @@
 - ![](https://img.shields.io/badge/Tailwind-CSS-blue)
 - ![](https://img.shields.io/badge/JavaScript-ES6-yellow)
 
+## sneak peek
+
+![](src/asset/AwesomeBook2B.gif)
 ## Getting Started
 
 **Prerequisites:** A Web Browser (preferably FireFox or Chrome)
