@@ -502,6 +502,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -517,6 +525,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }
 
 .mx-auto {
@@ -544,10 +557,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: inline-block;
 }
 
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
 }
@@ -570,6 +579,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-4 {
   height: 1rem;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-full {
@@ -606,6 +619,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .table-auto {
   table-layout: auto;
+}
+
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .grid-cols-1 {
@@ -650,14 +668,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-around {
-  justify-content: space-around;
-}
-
-.justify-items-center {
-  justify-items: center;
 }
 
 .justify-items-stretch {
@@ -781,9 +791,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-family: nier-font, system-ui;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-2xl {
@@ -806,16 +816,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -836,8 +836,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 @font-face {
   font-family: nier-font;
 
-  src: url('../../src/font/Airstrike.woff2') format('woff2'),
-    url('../../src/font/Airstrike.woff') format('woff');
+  src:
+    url("../../src/font/Airstrike.woff2") format("woff2"),
+    url("../../src/font/Airstrike.woff") format("woff");
 
   font-weight: 600;
 
@@ -922,13 +923,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 body {
   background-color: #d1cdb7;
   opacity: 0.8;
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       #ccc8b1 1px,
       transparent 1px
     ),
     linear-gradient(to right, #ccc8b1 1px, #d1cdb7 1px);
   background-size: 6px 6px;
-  box-shadow: rgb(50 50 93 / 25%) 0 20px 40px -12px inset,
+  box-shadow:
+    rgb(50 50 93 / 25%) 0 20px 40px -12px inset,
     rgb(0 0 0 / 30%) 0 18px 18px -18px inset;
 }
 
@@ -943,6 +946,177 @@ body {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.pattern {
+  border-top: 2px solid $color;
+}
+
+.pattern-inner {
+  background-size:
+    50px 3px,
+    50px 1px,
+    50px 1px,
+    50px 1px,
+    50px 1px,
+    50px 1px,
+    50px 1px,
+    50px 1px,
+    50px 1px;
+  background-position:
+    0 0,
+    22px 4px,
+    22px 5px,
+    22px 6px,
+    22px 7px,
+    28px 12px,
+    28px 13px,
+    28px 14px,
+    28px 15px;
+  background-image:
+    linear-gradient(
+      90deg,
+      #4d493e,
+      #4d493e 10px,
+      transparent 10px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(77 73 62 / 40%),
+      rgb(77 73 62 / 40%) 1px,
+      rgb(77 73 62 / 80%) 1px,
+      rgb(77 73 62 / 80%) 2px,
+      rgb(77 73 62 / 90%) 2px,
+      rgb(77 73 62 / 90%) 3px,
+      rgb(77 73 62 / 40%) 3px,
+      rgb(77 73 62 / 40%) 4px,
+      transparent 4px,
+      transparent 12px,
+      rgb(77 73 62 / 40%) 12px,
+      rgb(77 73 62 / 40%) 13px,
+      rgb(77 73 62 / 80%) 13px,
+      rgb(77 73 62 / 80%) 14px,
+      rgb(77 73 62 / 90%) 14px,
+      rgb(77 73 62 / 90%) 15px,
+      rgb(77 73 62 / 40%) 15px,
+      rgb(77 73 62 / 40%) 16px,
+      transparent 16px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(77 73 62 / 90%),
+      rgb(77 73 62 / 90%) 1px,
+      #4d493e 1px,
+      #4d493e 2px,
+      #4d493e 2px,
+      #4d493e 3px,
+      rgb(77 73 62 / 90%) 3px,
+      rgb(77 73 62 / 90%) 4px,
+      transparent 4px,
+      transparent 12px,
+      rgb(77 73 62 / 90%) 12px,
+      rgb(77 73 62 / 90%) 13px,
+      #4d493e 13px,
+      #4d493e 14px,
+      #4d493e 14px,
+      #4d493e 15px,
+      rgb(77 73 62 / 90%) 15px,
+      rgb(77 73 62 / 90%) 16px,
+      transparent 16px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(77 73 62 / 90%),
+      rgb(77 73 62 / 90%) 1px,
+      #4d493e 1px,
+      #4d493e 2px,
+      #4d493e 2px,
+      #4d493e 3px,
+      rgb(77 73 62 / 90%) 3px,
+      rgb(77 73 62 / 90%) 4px,
+      transparent 4px,
+      transparent 12px,
+      rgb(77 73 62 / 90%) 12px,
+      rgb(77 73 62 / 90%) 13px,
+      #4d493e 13px,
+      #4d493e 14px,
+      #4d493e 14px,
+      #4d493e 15px,
+      rgb(77 73 62 / 90%) 15px,
+      rgb(77 73 62 / 90%) 16px,
+      transparent 16px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(77 73 62 / 40%),
+      rgb(77 73 62 / 40%) 1px,
+      rgb(77 73 62 / 80%) 1px,
+      rgb(77 73 62 / 80%) 2px,
+      rgb(77 73 62 / 90%) 2px,
+      rgb(77 73 62 / 90%) 3px,
+      rgb(77 73 62 / 40%) 3px,
+      rgb(77 73 62 / 40%) 4px,
+      transparent 4px,
+      transparent 12px,
+      rgb(77 73 62 / 40%) 12px,
+      rgb(77 73 62 / 40%) 13px,
+      rgb(77 73 62 / 80%) 13px,
+      rgb(77 73 62 / 80%) 14px,
+      rgb(77 73 62 / 90%) 14px,
+      rgb(77 73 62 / 90%) 15px,
+      rgb(77 73 62 / 40%) 15px,
+      rgb(77 73 62 / 40%) 16px,
+      transparent 16px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(77 73 62 / 40%),
+      rgb(77 73 62 / 40%) 1px,
+      rgb(77 73 62 / 80%) 1px,
+      rgb(77 73 62 / 80%) 2px,
+      rgb(77 73 62 / 90%) 2px,
+      rgb(77 73 62 / 90%) 3px,
+      rgb(77 73 62 / 40%) 3px,
+      rgb(77 73 62 / 40%) 4px,
+      transparent 4px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(77 73 62 / 90%),
+      rgb(77 73 62 / 90%) 1px,
+      #4d493e 1px,
+      #4d493e 2px,
+      #4d493e 2px,
+      #4d493e 3px,
+      rgb(77 73 62 / 90%) 3px,
+      rgb(77 73 62 / 90%) 4px,
+      transparent 4px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(77 73 62 / 90%),
+      rgb(77 73 62 / 90%) 1px,
+      #4d493e 1px,
+      #4d493e 2px,
+      #4d493e 2px,
+      #4d493e 3px,
+      rgb(77 73 62 / 90%) 3px,
+      rgb(77 73 62 / 90%) 4px,
+      transparent 4px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(77 73 62 / 40%),
+      rgb(77 73 62 / 40%) 1px,
+      rgb(77 73 62 / 80%) 1px,
+      rgb(77 73 62 / 80%) 2px,
+      rgb(77 73 62 / 90%) 2px,
+      rgb(77 73 62 / 90%) 3px,
+      rgb(77 73 62 / 40%) 3px,
+      rgb(77 73 62 / 40%) 4px,
+      transparent 4px
+    );
+  background-repeat: repeat-x;
 }
 
 .before\:top-1::before {
