@@ -4,10 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet"
-    href="./dist/stylesheets/index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/stylesheets/index.css">
+
+
+
+  <meta property="og:url"
+    content="https://sboursen.github.io/Awesome-Books-2BEdition/" />
+  <meta property="og:title" content="AwesomeBook2B" />
+  <meta property="og:image" content="./src/asset/AwesomeBook2B.gif" />
+  <meta property="og:image:url" content="./src/asset/AwesomeBook2B.gif" />
+  <meta property="twitter:image" content="./src/asset/AwesomeBook2B.gif" />
+
+
+
   <link rel="stylesheet"
     href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
@@ -20,22 +30,18 @@
   class=" text-active grid grid-cols-1 grid-rows-[5rem_1fr_5rem] w-full h-screen font-sans justify-items-stretch">
 
   <!-- Mobile menu -->
-  <div
-    class="mobile-menu hidden absolute h-screen w-full z-20 bg-body">
+  <div class="mobile-menu hidden absolute h-screen w-full z-20 bg-body">
 
-    <div
-      class="toolbar flex flex-row m-6 items-start justify-end">
+    <div class="toolbar flex flex-row m-6 items-start justify-end">
       <button class="cancel" type="button">
         <i class="fas fa-times fa-2x"></i>
       </button>
     </div>
 
-    <section
-      class="menu-body flex flex-col items-center gap-24">
+    <section class="menu-body flex flex-col items-center gap-24">
       <span class="text-4xl ">
-        <button class="font-nier text-active text-shadow"
-          type="button" name="button"> <i
-            class="fas fa-books"></i>
+        <button class="font-nier text-active text-shadow" type="button"
+          name="button"> <i class="fas fa-books"></i>
           Awesome
           Books</button>
       </span>
@@ -66,14 +72,12 @@
     class="bg-transparent mx-6 mt-3 flex flex-col items-stretch justify-center">
     <div
       class="mobile-nav p-2 flex flex-row items-center justify-between md:hidden">
-      <button
-        class="mobile-menu-button hover:bg-active p-2 hover:text-body"
+      <button class="mobile-menu-button hover:bg-active p-2 hover:text-body"
         type="button">
         <i class="fas fa-bars fa-2x"></i>
       </button>
-      <span class="text-4xl"> <button class="font-nier"
-          type="button" name="button"> <i
-            class="fas fa-books"></i> Awesome
+      <span class="text-4xl"> <button class="font-nier" type="button"
+          name="button"> <i class="fas fa-books"></i> Awesome
           Books</button>
       </span>
 
@@ -83,9 +87,8 @@
 
     <nav
       class="desktop-nav p-2 hidden md:flex md:flex-row md:items-center md:justify-between">
-      <span class="text-4xl"> <button class="font-nier"
-          type="button" name="button"> <i
-            class="fas fa-books"></i> Awesome
+      <span class="text-4xl"> <button class="font-nier" type="button"
+          name="button"> <i class="fas fa-books"></i> Awesome
           Books</button>
       </span>
 
@@ -110,8 +113,7 @@
       </ul>
     </nav>
 
-    <div class='h-4 w-full text-right pr-10 font-semibold'
-      id="date-container">
+    <div class='h-4 w-full text-right pr-10 font-semibold' id="date-container">
       Hero
     </div>
 
@@ -130,13 +132,11 @@
 
     <section id='home'
       class="w-10/12 h-full flex flex-col gap-12 justify-start items-center ">
-      <h1 class="text-2xl headings"><i
-          class="fad fa-book-heart"></i>
+      <h1 class="text-2xl headings"><i class="fad fa-book-heart"></i>
         <span class="">All Awesome
           Books</span>
       </h1>
-      <table
-        class="w-full min-h-12 table-auto bg-bodyLight">
+      <table class="w-full min-h-12 table-auto bg-bodyLight">
         <thead>
           <tr class="border-b-2 border-active text-left">
             <th class="p-2">Title by Author
@@ -156,38 +156,29 @@
         <fieldset
           class="w-full h-full table-auto flex flex-col justify-center gap-6 border-2 ">
           <legend align="center">
-            <h1 class="text-2xl headings"><i
-                class="fad fa-book-medical"></i>
+            <h1 class="text-2xl headings"><i class="fad fa-book-medical"></i>
               <span class="">Add New Book</span>
             </h1>
           </legend>
           <div class="flex flex-col gap-3">
             <label for="title"
               class="flex flex-col justify-center gap-2 items-center">
-              <h3
-                class="w-11/12 text-active text-left text-xl">
+              <h3 class="w-11/12 text-active text-left text-xl">
                 Title</h3>
-              <input
-                class="w-11/12 bg-bodyLight py-1 px-2 text-active"
-                type="text" name="title" value=""
-                id="title">
+              <input class="w-11/12 bg-bodyLight py-1 px-2 text-active"
+                type="text" name="title" value="" id="title">
             </label>
-            <small id='title-validation'
-              class="hidden">LooL</small>
+            <small id='title-validation' class="hidden">LooL</small>
           </div>
           <div class="flex flex-col gap-3 items-stretch">
             <label for="author"
               class="flex flex-col justify-center gap-2 items-center">
-              <h3
-                class="w-11/12 text-active text-left text-xl">
+              <h3 class="w-11/12 text-active text-left text-xl">
                 Author</h3>
-              <input
-                class="w-11/12 bg-bodyLight py-1 px-2 text-active"
-                type="text" name="author" value=""
-                id="author">
+              <input class="w-11/12 bg-bodyLight py-1 px-2 text-active"
+                type="text" name="author" value="" id="author">
             </label>
-            <small id='author-validation'
-              class="hidden">LooL</small>
+            <small id='author-validation' class="hidden">LooL</small>
 
           </div>
 
@@ -201,8 +192,7 @@
 
     <section id='contact'
       class="hidden w-10/12 h-full flex-col gap-12 justify-start items-center">
-      <h1 class="text-2xl headings"><i
-          class="fas fa-address-card"></i>
+      <h1 class="text-2xl headings"><i class="fas fa-address-card"></i>
         <span class="">Contact me</span>
       </h1>
       <div class="flex flex-row gap-3">
@@ -212,8 +202,7 @@
 
         <ul class="flex flex-col gap-3 mt-2">
           <li>
-            <h3 class="font-bold"><i
-                class="fas fa-user mr-2"></i> Soufiane
+            <h3 class="font-bold"><i class="fas fa-user mr-2"></i> Soufiane
               Boursen
             </h3>
           </li>
@@ -221,7 +210,7 @@
                 class="fab fa-github"></i> @Sboursen</a>
           </li>
           <li><a href="https://twitter.com/sboursen_dev"><i
-                class="fab fa-twitter"></i></a>
+                class="fab fa-twitter"></i>@Sboursen</a>
             @sboursen_dev</li>
           <li><a href="https://linkedin.com/in/sboursen"><i
                 class="fab fa-linkedin-in"></i>
@@ -236,28 +225,24 @@
 
 
 
-  <footer
-    class="mx-6 mb-3  flex flex-row gap-12  justify-center items-center">
+  <footer class="mx-6 mb-3  flex flex-row gap-12  justify-center items-center">
     <a class="flex flex-row text-lg"
       href="https://github.com/Sboursen/awesome-books/blob/main/LICENSE">
       <span>COPYRIGHT</span>
-      <img class="w-6 h-6 object-contain"
-        src="./src/images/copyright.svg" alt="copyright">
+      <img class="w-6 h-6 object-contain" src="./src/images/copyright.svg"
+        alt="copyright">
     </a>
 
     <p class="text-sm hidden md:block">
       Awesome Books 2B edition. Some Rights Reserved under
-      the <a
-        class="inline-block text-active font-bold hover:text-warning "
+      the <a class="inline-block text-active font-bold hover:text-warning "
         href="https://github.com/Sboursen/awesome-books/blob/main/LICENSE">MIT
         license</a>
     </p>
   </footer>
 
-  <script src="./src/modules/event-callback.js"
-    type="module"></script>
-  <script src="./src/modules/menu.js"
-    type="module"></script>
+  <script src="./src/modules/event-callback.js" type="module"></script>
+  <script src="./src/modules/menu.js" type="module"></script>
   <script src="./src/index.js" type="module"></script>
 </body>
 
